@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bunker"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-10 08:10:26 PM"/>
+        <attribute name="created" value="QnVua2VyO0RFU0tUT1AtUzY1TkkySTsyMDIxLTEyLTEwOzA3OjMyOjM5IFBNOzI5Mzk="/>
+        <attribute name="edited" value="QnVua2VyO0RFU0tUT1AtUzY1TkkySTsyMDIxLTEyLTEwOzA4OjEwOjI2IFBNOzI7MzA0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="t" type="Real" array="False" size=""/>
+            <declare name="p" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter number of concert tickets&quot;" newline="True"/>
+            <input variable="t"/>
+            <if expression="t&gt;=25">
+                <then>
+                    <assign variable="p" expression="50"/>
+                </then>
+                <else>
+                    <if expression="t&gt;=10 and t&lt;=24">
+                        <then>
+                            <assign variable="p" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="t&gt;=5 and t&lt;=9">
+                                <then>
+                                    <assign variable="p" expression="70"/>
+                                </then>
+                                <else>
+                                    <if expression="t&lt;5">
+                                        <then>
+                                            <assign variable="p" expression="75"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="t * p"/>
+            <output expression="&quot;The number of tickets: &quot; &amp; t" newline="True"/>
+            <output expression="&quot;Price of per ticket : &quot; &amp; p" newline="True"/>
+            <output expression="&quot;Total : &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

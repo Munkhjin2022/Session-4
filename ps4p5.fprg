@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bunker"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-10 08:20:36 PM"/>
+        <attribute name="created" value="QnVua2VyO0RFU0tUT1AtUzY1TkkySTsyMDIxLTEyLTEwOzA3OjUwOjUzIFBNOzI5MzU="/>
+        <attribute name="edited" value="QnVua2VyO0RFU0tUT1AtUzY1TkkySTsyMDIxLTEyLTEwOzA4OjIwOjM2IFBNOzE7MzA0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="level" type="Real" array="False" size=""/>
+            <declare name="salary" type="Real" array="False" size=""/>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the last name: &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter the salary: &quot;" newline="True"/>
+            <input variable="salary"/>
+            <output expression="&quot;Enter the job level: &quot;" newline="True"/>
+            <input variable="level"/>
+            <if expression="level&gt;=10">
+                <then>
+                    <assign variable="rate" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="level&gt;=5 and level&lt;=9">
+                        <then>
+                            <assign variable="rate" expression="0.2"/>
+                        </then>
+                        <else>
+                            <assign variable="rate" expression="0.1"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="bonus" expression="salary * rate"/>
+            <output expression="&quot;Last name : &quot; &amp; name" newline="True"/>
+            <output expression="&quot;The bonus : &quot; &amp; bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
